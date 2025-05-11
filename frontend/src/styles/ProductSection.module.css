@@ -1,0 +1,141 @@
+.productSectionContainer {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.categoriesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.categoryCard {
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+}
+
+.imageContainer {
+  position: relative;
+  padding-bottom: 60%;
+  overflow: hidden;
+}
+
+.imageContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.imageContainer:hover .imageOverlay {
+  transform: translateY(0);
+}
+
+.imageContainer:hover img {
+  transform: scale(1.1);
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.productCard {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.productImageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.productImageContainer img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.productOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.productImageContainer:hover .productOverlay {
+  opacity: 1;
+}
+
+.productImageContainer:hover img {
+  transform: scale(1.1);
+}
+
+.productCard h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.productCard p {
+  color: #ff6b35;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .categoriesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+}

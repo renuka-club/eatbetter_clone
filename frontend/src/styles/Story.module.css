@@ -1,0 +1,352 @@
+.story {
+    padding: 4rem 0;
+    background-color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .mainTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 3rem;
+  }
+  
+  .videoSection {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(45deg, #ff6b00, #ff8c00);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 4rem;
+  }
+  
+  .videoContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+  }
+  
+  .brandLogo {
+    width: 200px;
+    margin: 0 auto 2rem;
+  }
+  
+  .brandLogo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .founderInfo {
+    margin-top: 2rem;
+  }
+  
+  .founderName {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .founderTitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .deliverySection {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .deliveryTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    margin-bottom: 2rem;
+  }
+  
+  .deliveryPartners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .deliveryPartners img {
+    height: 200px;
+    width: 150px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 8px; /* Optional: rounded edges */
+  }
+  
+  .deliveryPartners img:hover {
+    transform: scale(1.1);         /* Zoom in slightly */
+    filter: brightness(1.15);      /* Slightly brighter */
+    /* No box-shadow */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .videoSection {
+      height: 400px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .founderName {
+      font-size: 1.5rem;
+    }
+  
+    .deliveryPartners {
+      gap: 2rem;
+    }
+  
+    .deliveryPartners img {
+      height: 30px;
+    }
+  }
+
+.storyContent {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.storyText {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.storyText h3 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.storyText h3::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b00, #ff8c00);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.storyText:hover h3::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.storyText p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .storyContent {
+    padding: 40px 20px;
+  }
+
+  .storyText {
+    padding: 15px;
+  }
+
+  .storyText h3 {
+    font-size: 2rem;
+  }
+
+  .storyText p {
+    font-size: 1.1rem;
+  }
+}
+.values {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+.valueCard {
+  background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 107, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.valueCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 107, 0, 0.1), rgba(255, 140, 0, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.valueCard:hover::before {
+  opacity: 1;
+}
+
+.valueCard::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent 40%);
+  top: -50%;
+  left: -50%;
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.5s ease;
+}
+
+.valueCard:hover::after {
+  opacity: 0.4;
+  transform: scale(1);
+}
+
+.valueCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 107, 0, 0.15);
+  border-color: rgba(255, 107, 0, 0.3);
+}
+
+.valueIcon {
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  display: block;
+  color: #ff6b00;
+  text-shadow: 2px 2px 8px rgba(255, 107, 0, 0.2);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover .valueIcon {
+  transform: scale(1.1) rotate(5deg);
+  color: #ff8c00;
+}
+
+.valueCard h4 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.valueCard:hover h4 {
+  color: #ff6b00;
+}
+
+.valueCard p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover p {
+  color: #444;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.valueCard:active {
+  transform: scale(0.98);
+  box-shadow: 0 5px 15px rgba(255, 107, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .values {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .valueCard {
+    padding: 25px;
+  }
+
+  .valueIcon {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+
+  .valueCard h4 {
+    font-size: 1.3rem;
+  }
+
+  .valueCard p {
+    font-size: 1rem;
+  }
+}
+.partnerLink {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.partnerLink:hover {
+  transform: translateY(-5px);
+}
+
+.partnerLink img {
+  max-width: 120px;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.partnerLink:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}

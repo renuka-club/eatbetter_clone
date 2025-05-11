@@ -1,0 +1,467 @@
+.contact {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+}
+
+/* Add animation for main title */
+.mainTitle {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.contactCards {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* Add hover effect for contact cards */
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f5f5f5);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 0, 0.1));
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Add pulse effect for icon wrapper */
+.iconWrapper {
+  width: clamp(50px, 8vw, 60px);
+  height: clamp(50px, 8vw, 60px);
+  background-color: #ff6b35;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.title {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.info {
+  color: #666;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.formSection {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+.formTitle {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #333;
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  transition: border-color 0.3s ease;
+}
+
+.inputGroup textarea {
+  min-height: clamp(120px, 20vh, 150px);
+  resize: vertical;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.1);
+}
+
+.submitButton {
+  background-color: #ff6b35;
+  color: white;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.submitButton:hover {
+  background-color: #e85a2c;
+  transform: translateY(-2px);
+}
+
+/* Add focus effects for form inputs */
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.1);
+}
+
+/* Add button effects */
+.submitButton {
+  background-color: #ff6b35;
+  color: white;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.submitButton:hover {
+  background-color: #e85a2c;
+  transform: translateY(-2px);
+}
+
+.mainTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #ff6b35, #ff8f35);
+  transition: width 0.3s ease;
+}
+
+.mainTitle:hover::after {
+  width: 120px;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 0, 0.1));
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* Add pulse effect for icon wrapper */
+.iconWrapper {
+  width: clamp(50px, 8vw, 60px);
+  height: clamp(50px, 8vw, 60px);
+  background-color: #ff6b35;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: white;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+}
+
+.title {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.info {
+  color: #666;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.formSection {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 clamp(0.5rem, 2vw, 1rem);
+}
+
+.formTitle {
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: #333;
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  width: 100%;
+  padding: clamp(0.8rem, 2vw, 1rem);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  transition: border-color 0.3s ease;
+}
+
+.inputGroup textarea {
+  min-height: clamp(120px, 20vh, 150px);
+  resize: vertical;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.1);
+}
+
+.submitButton {
+  background-color: #ff6b35;
+  color: white;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.submitButton:hover {
+  background-color: #e85a2c;
+  transform: translateY(-2px);
+}
+
+/* Add focus effects for form inputs */
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.1);
+}
+
+/* Add button effects */
+.submitButton {
+  background-color: #ff6b35;
+  color: white;
+  padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  border: none;
+  border-radius: 5px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.submitButton:hover {
+  background-color: #e85a2c;
+  transform: translateY(-2px);
+}
+
+.submitButton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #ff8f35, #ff6b35);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.submitButton:hover::after {
+  opacity: 1;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+@keyframes formSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.inputGroup input:focus::placeholder,
+.inputGroup textarea:focus::placeholder {
+  transform: translateX(10px);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* Add loading state animation */
+.submitButton.loading {
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    45deg,
+    #ff6b35 25%,
+    #ff8f35 50%,
+    #ff6b35 75%
+  );
+  animation: shimmer 2s linear infinite;
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 480px) {
+  .contact {
+    padding: 3rem 0.5rem;
+  }
+
+  .contactCards {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact {
+    padding: 3.5rem 1rem;
+  }
+
+  .contactCards {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .contactCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Add animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+  }
+}

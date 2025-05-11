@@ -1,0 +1,197 @@
+/* Container & Header */
+.contactContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+  }
+  
+  .contactHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .contactHeader h1 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .contactHeader p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  /* Reach Out Cards */
+  .contactCards {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+    text-decoration: none;
+  }
+  
+  .card {
+    background: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .iconWrapper {
+    width: clamp(50px, 8vw, 60px);
+    height: clamp(50px, 8vw, 60px);
+    background-color: #ff6b35;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+  
+  .title {
+    font-size: clamp(1.1rem, 2vw, 1.25rem);
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .info {
+    color: #666;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+  }
+  
+  /* Contact Form */
+  .contactForm {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .formGroup {
+    margin-bottom: 1.5rem;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .formGroup textarea {
+    min-height: clamp(120px, 20vh, 150px);
+    resize: vertical;
+  }
+  
+  .formGroup input:focus,
+  .formGroup textarea:focus {
+    outline: none;
+    border-color: #ff6b35;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+  }
+  
+  /* Submit Button */
+  .submitButton {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #ff6b35;
+    color: white;
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    border: none;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+  }
+  
+  .submitButton:hover {
+    background-color: #e85a2c;
+    transform: translateY(-2px);
+  }
+  
+  /* Success Message */
+  .successMessage {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #e6f4ea;
+    color: #1e7e34;
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+  }
+  .errorMessage {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fee2e2;
+    color: #dc2626;
+    border-radius: 8px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contactCards {
+      grid-template-columns: 1fr;
+    }
+  
+    .contactForm {
+      padding: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contactContainer {
+      padding: 2rem 1rem;
+    }
+  
+    .contactHeader h1 {
+      font-size: 2rem;
+    }
+  
+    .card {
+      padding: 1.2rem;
+    }
+  
+    .formGroup input,
+    .formGroup textarea {
+      font-size: 0.95rem;
+    }
+  
+    .submitButton {
+      padding: 0.8rem 1rem;
+    }
+  }
+  
